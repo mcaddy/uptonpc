@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="Resources/Newsletters.aspx" title="Newsletter" description="Parish Meeting Newsletter" >
+		<siteMapNode url="~/Resources/GetBlob.ashx?id=17" title="Issue 6 - September 2011" description="" />
+		<siteMapNode url="~/Resources/GetBlob.ashx?id=15" title="Issue 5 - June 2011" description="" />
+		<siteMapNode url="~/Resources/GetBlob.ashx?id=5" title="Issue 4 - February 2011" description="" />
+		<siteMapNode url="~/Resources/GetBlob.ashx?id=4" title="Issue 3 - November 2010" description="" />
+		<siteMapNode url="~/Resources/GetBlob.ashx?id=12" title="Issue 2 - August 2010" description="" />
+		<siteMapNode url="~/Resources/GetBlob.ashx?id=11" title="Issue 1 - March 2010" description="" />
+	</siteMapNode>
+</siteMap>

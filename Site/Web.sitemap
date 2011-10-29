@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Default.aspx" title="Home"  description="Upton Parish Council">
+    <siteMapNode url="News/General/" title="News"  description="Latest Parish News" >
+      <siteMapNode url="News/Police/" title="Local Policing"  description="Local Policing Info" />
+    </siteMapNode>
+    <siteMapNode siteMapFile="minutes.sitemap" />
+    <siteMapNode siteMapFile="newsletters.sitemap" />
+    <siteMapNode url="Events/Default.aspx" title="Events"  description="" >
+    </siteMapNode>
+    <siteMapNode url="LocalInfo/Default.aspx" title="Local Info"  description="Local Information" >
+    </siteMapNode>
+    <siteMapNode url="Admin.aspx" title="Admin"  description="">
+      <siteMapNode url="News/admin/Default.aspx" title="News"  description="" >
+        <siteMapNode url="News/admin/Default.aspx?AddNew=true" title="Add"  description="" />
+      </siteMapNode>
+      <siteMapNode url="Events/admin/Default.aspx" title="Events"  description="" />
+      <siteMapNode url="Resources/admin/Default.aspx" title="Resources"  description="" />
+    </siteMapNode>
+    <siteMapNode url="ContactUs.aspx" title="Contact Us"  description="Key Contact Details" />
+  </siteMapNode>
+</siteMap>
