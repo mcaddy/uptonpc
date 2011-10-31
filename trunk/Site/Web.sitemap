@@ -10,6 +10,10 @@
     </siteMapNode>
     <siteMapNode url="LocalInfo/Default.aspx" title="Local Info"  description="Local Information" >
     </siteMapNode>
+    <siteMapNode url="Councillors/Default.aspx" title="Councillors"  description="">
+      <siteMapNode url="Councillors/admin/UpdateProfile.aspx" title="Update Profile"  description=""/>
+      <siteMapNode url="Councillors/admin/ForReading.aspx" title="For Reading"  description=""/>
+    </siteMapNode>
     <siteMapNode url="Admin.aspx" title="Admin"  description="">
       <siteMapNode url="News/admin/Default.aspx" title="News"  description="" >
         <siteMapNode url="News/admin/Default.aspx?AddNew=true" title="Add"  description="" />

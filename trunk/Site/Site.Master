@@ -26,7 +26,7 @@
                     <LoggedInTemplate>
                         Welcome <span class="bold">
                             <asp:LoginName ID="HeadLoginName" runat="server" />
-                        </span>! [
+                        </span> [
                         <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
                             LogoutPageUrl="~/" />
                         ]

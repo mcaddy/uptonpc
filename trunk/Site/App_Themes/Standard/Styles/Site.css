@@ -56,6 +56,7 @@ h1
 
 h2
 {
+    margin-top: 0.5em;
     font-size: 1.5em;
     font-weight: 600;
 }
@@ -116,7 +117,7 @@ first child of the left and right table columns */
 
 .main
 {
-    padding: 0px 12px;
+    padding: 0px 4px;
     margin: 12px 8px 8px 8px;
     min-height: 420px;
 }
@@ -159,6 +160,8 @@ div.menu ul
     margin: 0px;
     padding: 0px;
     width: auto;
+    position:relative;
+    z-index:15;
 }
 
 div.menu ul li a, div.menu ul li a:visited

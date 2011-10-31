@@ -9,6 +9,7 @@ using System.Data;
 using System.Configuration;
 using Mrc.Common;
 using System.IO;
+using UptonParishCouncil.Site.Code;
 
 namespace UptonParishCouncil.Site.Resources.admin
 {
@@ -88,29 +89,8 @@ namespace UptonParishCouncil.Site.Resources.admin
         {
             if (ResourceUpload.HasFile)
             {
-                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["UptonPC"].ConnectionString))
-                {
-                    connection.Open();
-                    using (SqlCommand command = new SqlCommand("UptonPC_SetResource", connection))
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@Title", SqlDbType.NVarChar, 50);
-                        command.Parameters["@Title"].Value = TitleTextBox.Text;
+                ResourceUtilities.AddResource(TitleTextBox.Text, int.Parse(ResourceTypeDropDownList.SelectedValue), ResourceUpload.FileBytes, ResourceUpload.FileName);
 
-                        command.Parameters.Add("@TypeId", SqlDbType.Int);
-                        command.Parameters["@TypeId"].Value = ResourceTypeDropDownList.SelectedValue;
-
-                        command.Parameters.Add("@Data", SqlDbType.Image);
-                        command.Parameters["@Data"].Value = ResourceUpload.FileBytes;
-
-                        command.Parameters.Add("@FileName", SqlDbType.NVarChar, 50);
-                        command.Parameters["@FileName"].Value = ResourceUpload.FileName;
-
-                        command.Parameters.Add("@MIMEType", SqlDbType.NVarChar, 50);
-                        command.Parameters["@MIMEType"].Value = Mrc.Common.Utils.GetMimeType(Path.GetExtension(ResourceUpload.FileName));
-                        command.ExecuteNonQuery();
-                    }
-                }
                 ResourcesGridView.DataBind();
             }
 

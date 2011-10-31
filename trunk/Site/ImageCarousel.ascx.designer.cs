@@ -10,15 +10,15 @@
 namespace UptonParishCouncil.Site {
     
     
-    public partial class TwitterControl {
+    public partial class ImageCarousel {
         
         /// <summary>
-        /// Twitter1 control.
+        /// lstPhotos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.Twitter Twitter1;
+        protected global::System.Web.UI.WebControls.ListView lstPhotos;
     }
 }

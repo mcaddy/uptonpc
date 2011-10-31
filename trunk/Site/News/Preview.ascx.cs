@@ -39,8 +39,21 @@ namespace UptonParishCouncil.Site.News
             set { keyword = value; }
         }
 
+        private Unit width;
+
+        public Unit Width
+        {
+            get { return width; }
+            set { width = value; }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!width.IsEmpty)
+            {
+                plNews.Width = this.width;
+            }
+
             switch (newsType)
             {
                 case Defines.NewsTypeEnum.General:

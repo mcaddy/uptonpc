@@ -4,7 +4,7 @@ function exiting() {
   alert('You are now leaving the Upton Parish Council site\r\n\r\n Upton Parish Council cannot be held responsible for the content of external sites');
 }
 </script>
-<asp:Panel ID="plNews" runat="server" style="padding:4px 4px 4px 4px;">
+<asp:Panel ID="plNews" runat="server" style="">
     <asp:Repeater ID="rptNews" runat="server">
         <ItemTemplate>
         <asp:HyperLink runat="server" ID="NewsLink" NavigateUrl='<%# NewsUrl(Eval("NoticeId"))%>' Text='<%#Eval("Subject")%>' /><br />
