@@ -5,16 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace UptonParishCouncil.Site
+namespace UptonParishCouncil.Site.LocalInfo
 {
-    public partial class SiteMaster : System.Web.UI.MasterPage
+    public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Browser.IsMobileDevice)
-            {
-                NavigationMenu.MaximumDynamicDisplayLevels = 0;
-            }
+
         }
     }
 }

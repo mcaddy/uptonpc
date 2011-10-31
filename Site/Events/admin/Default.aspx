@@ -94,7 +94,7 @@
         <br />
         <asp:Label ID="StartTimeLabel" runat="server" Text="Start Time:" AssociatedControlID="StartTimeTextBox" />
         <asp:TextBox ID="StartTimeTextBox" runat="server" MaxLength="5" Width="4em" /> (24 Hrs) <br />
-        <asp:RegularExpressionValidator runat="server" ValidationGroup="AddEvent" ID="StartTimeRegularExpressionValidator" ValidationExpression="{0..2}{0..9}:{0.5}{0..9}" ControlToValidate="StartTimeTextBox" />
+        <asp:RegularExpressionValidator runat="server" ValidationGroup="AddEvent" ID="StartTimeRegularExpressionValidator" Display="Dynamic" ErrorMessage="Please provide a valid start time" ValidationExpression="([0-1][0-9]|2[0-3]):([0-5][0-9])" ControlToValidate="StartTimeTextBox" />
         <asp:Label ID="TitleLabel" runat="server" Text="Summary:" AssociatedControlID="TitleTextBox" />
         <asp:TextBox ID="TitleTextBox" runat="server" CssClass="textEntry" /><br />
         <asp:Label ID="DescriptionLabel" runat="server" Text="Description:" AssociatedControlID="DescriptionTextBox" />

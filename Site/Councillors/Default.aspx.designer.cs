@@ -7,18 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UptonParishCouncil.Site {
+namespace UptonParishCouncil.Site.Councillors {
     
     
-    public partial class TwitterControl {
+    public partial class Default {
         
         /// <summary>
-        /// Twitter1 control.
+        /// profilesSqlDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.Twitter Twitter1;
+        protected global::System.Web.UI.WebControls.SqlDataSource profilesSqlDataSource;
+        
+        /// <summary>
+        /// profilesRepeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater profilesRepeater;
     }
 }

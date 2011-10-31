@@ -13,6 +13,15 @@ namespace UptonParishCouncil.Site {
     public partial class Default {
         
         /// <summary>
+        /// ImageCarousel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::UptonParishCouncil.Site.ImageCarousel ImageCarousel1;
+        
+        /// <summary>
         /// Preview1 control.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,14 @@ namespace UptonParishCouncil.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::UptonParishCouncil.Site.Events.EventsPreview EventsPreview1;
+        
+        /// <summary>
+        /// TwitterControl1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::UptonParishCouncil.Site.TwitterControl TwitterControl1;
     }
 }

@@ -75,13 +75,18 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Councillors\admin\ForReading.aspx" />
+    <Content Include="Councillors\admin\UpdateProfile.aspx" />
+    <Content Include="Councillors\Default.aspx" />
     <Content Include="Events\admin\Default.aspx" />
     <Content Include="Events\Default.aspx" />
     <Content Include="Events\EventsPreview.ascx" />
+    <Content Include="ImageCarousel.ascx" />
     <Content Include="images\Abuse_Icon.jpg" />
     <Content Include="images\Censor_Icon.jpg" />
     <Content Include="images\Delete_Icon.jpg" />
-    <Content Include="images\ElgarCentre.jpg" />
+    <Content Include="images\frontPage\ElgarCentre.jpg" />
+    <Content Include="images\frontPage\rear-of-building.jpg" />
     <Content Include="images\icons\digg.png" />
     <Content Include="images\icons\facebook.png" />
     <Content Include="images\icons\FindUsOnFacebook.gif" />
@@ -99,6 +104,7 @@
     <Content Include="images\Reply_Icon.jpg" />
     <Content Include="images\RSS-mini.gif" />
     <Content Include="images\RSS.gif" />
+    <Content Include="LocalInfo\Default.aspx" />
     <Content Include="News\admin\Default.aspx" />
     <Content Include="News\admin\ManagePolls.aspx" />
     <Content Include="News\admin\UpdateNewsCategory.aspx" />
@@ -138,6 +144,7 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Code\ResourceUtilities.cs" />
     <Compile Include="Code\Utils.cs" />
     <Compile Include="ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
@@ -174,6 +181,27 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Councillors\admin\ForReading.aspx.cs">
+      <DependentUpon>ForReading.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Councillors\admin\ForReading.aspx.designer.cs">
+      <DependentUpon>ForReading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Councillors\admin\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Councillors\admin\UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Councillors\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Councillors\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,6 +232,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ImageCarousel.ascx.cs">
+      <DependentUpon>ImageCarousel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageCarousel.ascx.designer.cs">
+      <DependentUpon>ImageCarousel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalInfo\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocalInfo\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="News\admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -368,6 +410,9 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Councillors\admin\Web.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
@@ -376,7 +421,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>21016</DevelopmentServerPort>
+          <DevelopmentServerPort>48626</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

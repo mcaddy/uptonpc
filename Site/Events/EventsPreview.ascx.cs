@@ -9,7 +9,7 @@ namespace UptonParishCouncil.Site.Events
 {
     public partial class EventsPreview : System.Web.UI.UserControl
     {
-        public DateTime maxDate = DateTime.MinValue;
+        public DateTime maxDate = DateTime.MaxValue;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,7 +24,7 @@ namespace UptonParishCouncil.Site.Events
         protected string DateHeader(object dateObject)
         {
             DateTime date = (DateTime)dateObject;
-            if (maxDate < date)
+            if (maxDate > date)
             {
                 maxDate = (DateTime)Eval("Date");
                 return string.Format("<div style=\"font-style:italic;\">{0:dd/MM/yyyy}</div>", date);

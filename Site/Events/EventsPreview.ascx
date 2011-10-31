@@ -1,7 +1,12 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EventsPreview.ascx.cs" Inherits="UptonParishCouncil.Site.Events.EventsPreview" %>
 <asp:SqlDataSource ID="EventsPreviewSqlDataSource" runat="server" 
     ConnectionString="<%$ ConnectionStrings:UptonPC %>" 
-    SelectCommand="UptonPC_GetFeaturedEvents" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+    SelectCommand="UptonPC_GetFeaturedEvents" SelectCommandType="StoredProcedure">
+    <SelectParameters>
+    <asp:Parameter Name="Count" DefaultValue="3" DbType="Int32" />
+    </SelectParameters>
+    
+    </asp:SqlDataSource>
 <asp:Repeater ID="Repeater1" runat="server" 
     DataSourceID="EventsPreviewSqlDataSource">
 
