@@ -51,6 +51,8 @@ namespace UptonParishCouncil.Site.Councillors.admin
             profileSqlDataSource.Update();
 
             SetProfilePhoto();
+
+            Response.Redirect(string.Format("~/Councillors/Default.aspx?UserId={0}", Membership.GetUser(User.Identity.Name).ProviderUserKey));
         }
 
         private void SetProfilePhoto()

@@ -55,10 +55,12 @@
         </div>
     </div>
     <div class="footer">
-        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
-        <asp:Menu ID="NavigationMenu" runat="server" CssClass="mobileMenu" StaticDisplayLevels="1" MaximumDynamicDisplayLevels="0"
-            DataSourceID="SiteMapDataSource1" EnableViewState="false" IncludeStyleBlock="false"
-            Orientation="Horizontal" SkipLinkText="" />
+        <asp:SiteMapDataSource ID="uptonpcSiteMapDataSource" runat="server" ShowStartingNode="false" />
+        <asp:Menu ID="NavigationMenu" runat="server" CssClass="mobileMenu" 
+            StaticDisplayLevels="1" MaximumDynamicDisplayLevels="0"
+            DataSourceID="uptonpcSiteMapDataSource" EnableViewState="false" IncludeStyleBlock="false"
+            Orientation="Horizontal" SkipLinkText=""
+            ondatabound="NavigationMenu_DataBound" />
     </div>
     <div style="float: right; display: inline">
         <asp:LinkButton ID="DesktopVersionLinkButton" runat="server" Text="Desktop Version" 

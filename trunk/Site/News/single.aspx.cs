@@ -18,11 +18,12 @@ namespace UptonParishCouncil.Site.News
         protected void Page_PreInit(object sender, EventArgs e)
         {
             MasterPageFile = Utils.GetMasterPage();
-            mobileBackLink.Visible = !Utils.GetIsMobile();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            mobileBackHyperLink.Visible = !Utils.GetIsMobile();
+
             int NoticeId = 0;
 
             if (RouteData.Values.Count > 0)

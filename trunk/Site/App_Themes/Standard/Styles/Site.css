@@ -141,7 +141,6 @@ first child of the left and right table columns */
     background-color: #465c71;
     padding: 0px;
     margin: 0px auto;
-    text-align: center;
     line-height: normal;
 }
 
@@ -213,7 +212,7 @@ div.mobileMenu ul
     z-index:15;
 }
 
-div.mobileMenu ul li a, div.mobileMenu ul li a:visited
+div.mobileMenu ul li a, div.mobileMenu ul li a:visited, a.mobileMenuHome
 {
     background-color: #465c71;
     color: #dde4ec;
