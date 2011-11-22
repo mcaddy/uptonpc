@@ -22,5 +22,12 @@ namespace UptonParishCouncil.Site
             Session["IsMobile"] = false;
             Response.Redirect("~/");
         }
+
+        protected void NavigationMenu_DataBound(object sender, EventArgs e)
+        {
+            MenuItem homeMenuItem = new MenuItem("Home");
+            homeMenuItem.NavigateUrl = "~/Mobile/Default.aspx";
+            NavigationMenu.Items.AddAt(0, homeMenuItem);
+        }
     }
 }

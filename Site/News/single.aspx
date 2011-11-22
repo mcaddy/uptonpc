@@ -5,7 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="Server">
     <span style="float: right;">
         <asp:Label runat="server" ID="lblDate" />
-        <asp:HyperLink runat="server" ID="mobileBackLink" Visible="false" NavigateUrl="~/Mobile/Default.aspx" Text="Back" />
+        <asp:HyperLink runat="server" ID="mobileBackHyperLink" NavigateUrl="~/Mobile/Default.aspx" Text="Back" />
     </span>
     <h1>
         <asp:Label runat="server" ID="lblTitle" /></h1>
