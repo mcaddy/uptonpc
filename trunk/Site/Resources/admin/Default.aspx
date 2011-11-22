@@ -65,7 +65,7 @@
             </asp:TemplateField>
             <asp:BoundField DataField="FileName" HeaderText="FileName" ReadOnly="true" />
             <asp:BoundField DataField="MIMEType" HeaderText="MIMEType"  ReadOnly="true" />
-            <asp:BoundField DataField="UploadDate" DataFormatString="{0:dd/MM/yyyy}" 
+            <asp:BoundField DataField="UploadDate" DataFormatString="{0:yyyy-MM-dd}" 
                 HeaderText="UploadDate" HtmlEncodeFormatString="False" ReadOnly="True" 
                 SortExpression="UploadDate" />
             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />

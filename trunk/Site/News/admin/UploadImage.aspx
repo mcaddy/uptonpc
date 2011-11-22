@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/Window.master" AutoEventWireup="true" Inherits="UptonParishCouncil.Site.News.Admin.UploadImage" Title="Upload Image" Codebehind="UploadImage.aspx.cs" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphWindow" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
 <table style="width:100%; border:solid 2px #D9291C;" cellspacing="0">
 <tr>
 <td style="height:2em; background-color:#D9291C; color:White; font-weight:bold;">Upload Photo</td>

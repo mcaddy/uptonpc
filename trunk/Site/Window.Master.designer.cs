@@ -7,27 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UptonParishCouncil.Site.Councillors.admin {
+namespace UptonParishCouncil.Site {
     
     
-    public partial class ForReading {
+    public partial class WindowMaster {
         
         /// <summary>
-        /// forReadingSqlDataSource control.
+        /// HeadContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource forReadingSqlDataSource;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
         
         /// <summary>
-        /// forReadingRepeater control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater forReadingRepeater;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// MainContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
     }
 }

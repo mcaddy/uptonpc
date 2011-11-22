@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace UptonParishCouncil.Site
 {
-    public partial class SiteMaster : System.Web.UI.MasterPage
+    public partial class MobileMaster : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,10 +17,10 @@ namespace UptonParishCouncil.Site
             }
         }
 
-        protected void mobileVersionLinkButton_Click(object sender, EventArgs e)
+        protected void DesktopVersionLinkButton_Click(object sender, EventArgs e)
         {
-            Session["IsMobile"] = true;
-            Response.Redirect("~/Mobile/");
+            Session["IsMobile"] = false;
+            Response.Redirect("~/");
         }
     }
 }

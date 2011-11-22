@@ -17,7 +17,7 @@
                 <h2>
                     Latest News</h2>
                     <hr />
-                <UptonPC:Preview ID="Preview1" runat="server" NewsType="General" Count="3" Width="585px" />
+                <UptonPC:Preview ID="Preview1" runat="server" NewsType="General" Count="3" Width="585px" ShowBody="true" />
             </td>
             <td style="vertical-align: top; padding-left:12px;">
                 <h2>
@@ -27,7 +27,7 @@
                 <h2>
                     Twitter</h2>
                     <hr />
-                    <uc1:TwitterControl ID="TwitterControl1" runat="server" Search="#uptonpc OR from:NorthantsPolice" Mode="Search" />
+                    <uc1:TwitterControl ID="TwitterControl1" runat="server" Search="#uptonpc OR from:NorthantsPolice OR from:NorthamptonBC" Mode="Search" />
                     
             </td>
         </tr>

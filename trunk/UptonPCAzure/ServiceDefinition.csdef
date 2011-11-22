@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ServiceDefinition name="UptonPCAzure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
-  <WebRole name="UptonPCSite" vmsize="Small">
+  <WebRole name="UptonPCSite" vmsize="Small" enableNativeCodeExecution="true">
     <Sites>
       <Site name="Web">
         <Bindings>
@@ -14,5 +14,10 @@
     <Imports>
       <Import moduleName="Diagnostics" />
     </Imports>
+    <LocalResources>
+    </LocalResources>
+    <ConfigurationSettings>
+      <Setting name="DataConnectionString" />
+    </ConfigurationSettings>
   </WebRole>
 </ServiceDefinition>

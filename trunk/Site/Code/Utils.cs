@@ -183,6 +183,30 @@ namespace UptonParishCouncil.Site
     /// </summary>
     public class Utils
     {
+        public static bool GetIsMobile()
+        {
+            if (HttpContext.Current.Session["IsMobile"] == null)
+            {
+                HttpContext.Current.Session["IsMobile"] = HttpContext.Current.Request.Browser.IsMobileDevice;
+            }
+
+            return (bool)HttpContext.Current.Session["IsMobile"];
+        }
+
+        public static string GetMasterPage()
+        {
+            bool isMobile = GetIsMobile();
+
+            if (isMobile)
+            {
+                return "~/Mobile.Master";
+            }
+            else
+            {
+                return "~/Site.Master";
+            }
+        }
+
         public static string ResourceUrl(object objectResourceId, object objectTitle)
         {
             int resourceId = int.Parse(objectResourceId.ToString());
@@ -253,7 +277,7 @@ namespace UptonParishCouncil.Site
                 using (System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage())
                 {
                     //set the addresses
-                    mail.From = new System.Net.Mail.MailAddress("errorMgr_uptonpc@UptonPC.info");
+                    mail.From = new System.Net.Mail.MailAddress("errorMgr_uptonpc@UptonPC.org");
                     mail.To.Add(ConfigurationManager.AppSettings.Get("ErrorMailToAddress"));
                     string newLine = "\r\n";
                     //set the content

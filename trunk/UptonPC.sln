@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrcControls", "..\MrcContro
 EndProject
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "UptonPCAzure", "UptonPCAzure\UptonPCAzure.ccproj", "{06228E95-A705-4B50-83F8-BAADB6B1FFA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiftyOne.Foundation 4", "..\51degrees.Foundation\FiftyOne.Foundation 4.csproj", "{2C9B0E11-2654-49AF-855A-BFA629F302E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Both|Any CPU = Both|Any CPU
@@ -40,6 +42,12 @@ Global
 		{06228E95-A705-4B50-83F8-BAADB6B1FFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06228E95-A705-4B50-83F8-BAADB6B1FFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06228E95-A705-4B50-83F8-BAADB6B1FFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C9B0E11-2654-49AF-855A-BFA629F302E8}.Both|Any CPU.ActiveCfg = Release|Any CPU
+		{2C9B0E11-2654-49AF-855A-BFA629F302E8}.Both|Any CPU.Build.0 = Release|Any CPU
+		{2C9B0E11-2654-49AF-855A-BFA629F302E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C9B0E11-2654-49AF-855A-BFA629F302E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C9B0E11-2654-49AF-855A-BFA629F302E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C9B0E11-2654-49AF-855A-BFA629F302E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

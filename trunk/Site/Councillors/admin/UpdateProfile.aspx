@@ -14,34 +14,25 @@
         </SelectParameters>
         <UpdateParameters>
             <asp:Parameter Name="UserId" Type="Empty" />
-            <asp:ControlParameter ControlID="SurnameTextBox" Name="Surname" 
-                PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="FirstNameTextBox" Name="FirstName" 
-                PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="BioTextBox" Name="Bio" PropertyName="Text" 
-                Type="String" />
-            <asp:ControlParameter ControlID="PhoneTextBox" Name="ContactPhone" 
-                PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="EmailTextBox" Name="ContactEmail" 
-                PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="ResponsibilitesTextBox" Name="Responsibilites" 
-                PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="BioTextBox" Name="Bio" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="PhoneTextBox" Name="ContactPhone" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="ResponsibilitesTextBox" Name="Responsibilites" PropertyName="Text" Type="String" />
         </UpdateParameters>
 </asp:SqlDataSource>
 <table>
 <tr>
 <td style="text-align:right;">First Name:</td>
-<td><asp:TextBox ID="FirstNameTextBox" runat="server"/></td>
+<td><asp:Label ID="FirstNameLabel" runat="server"/></td>
 </tr>
 
 <tr>
 <td style="text-align:right;">Surname:</td>
-<td><asp:TextBox ID="SurnameTextBox" runat="server"/></td>
+<td><asp:Label ID="SurnameLabel" runat="server"/></td>
 </tr>
 
 <tr>
 <td style="text-align:right;">Email Address:</td>
-<td><asp:TextBox ID="EmailTextBox" runat="server"/></td>
+<td><asp:Label ID="EmailLabel" runat="server"/></td>
 </tr>
 
 <tr>

@@ -32,6 +32,11 @@ namespace UptonParishCouncil.Site.News
             return theLink;
         }
 
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            MasterPageFile = Utils.GetMasterPage();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -57,11 +62,11 @@ namespace UptonParishCouncil.Site.News
                 {
                     case Defines.NewsTypeEnum.General:
                         NewsTitleLabel.Text = "General News";
-                        hlRssLink.NavigateUrl = "/news/General_News.rss";
+                        hlRssLink.NavigateUrl = "/NewsRss/General";
                         break;
                     case Defines.NewsTypeEnum.Police:
                         NewsTitleLabel.Text = "Police";
-                        hlRssLink.NavigateUrl = "/news/Police_News.rss";
+                        hlRssLink.NavigateUrl = "/NewsRss/Police";
                         break;
                 }
 

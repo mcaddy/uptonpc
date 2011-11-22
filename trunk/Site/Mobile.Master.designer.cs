@@ -7,54 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UptonParishCouncil.Site.Councillors {
+namespace UptonParishCouncil.Site {
     
     
-    public partial class Default {
+    public partial class MobileMaster {
         
         /// <summary>
-        /// councillorsLinksPanel control.
+        /// HeadContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel councillorsLinksPanel;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
         
         /// <summary>
-        /// ForReadingHyperLink control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink ForReadingHyperLink;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// titlePanel control.
+        /// HeadLoginView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel titlePanel;
+        protected global::System.Web.UI.WebControls.LoginView HeadLoginView;
         
         /// <summary>
-        /// profilesSqlDataSource control.
+        /// MainContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource profilesSqlDataSource;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
         
         /// <summary>
-        /// profilesRepeater control.
+        /// SiteMapDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater profilesRepeater;
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource1;
+        
+        /// <summary>
+        /// NavigationMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Menu NavigationMenu;
+        
+        /// <summary>
+        /// DesktopVersionLinkButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton DesktopVersionLinkButton;
     }
 }

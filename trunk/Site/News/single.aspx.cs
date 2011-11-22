@@ -15,6 +15,12 @@ namespace UptonParishCouncil.Site.News
 {
     public partial class Single : System.Web.UI.Page
     {
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            MasterPageFile = Utils.GetMasterPage();
+            mobileBackLink.Visible = !Utils.GetIsMobile();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             int NoticeId = 0;
