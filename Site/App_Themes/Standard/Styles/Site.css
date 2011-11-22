@@ -4,7 +4,7 @@
 body   
 {
     background: #b6b7bc;
-    font-size: .80em;
+    font-size: 1em;
     font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
     margin: 0px;
     padding: 0px;
@@ -95,6 +95,12 @@ first child of the left and right table columns */
     border: 1px solid #496077;
 }
 
+.mobilePage
+{
+    background-color: #fff;
+    border: 1px solid #496077;
+}
+
 .header
 {
     position: relative;
@@ -111,7 +117,6 @@ first child of the left and right table columns */
     padding: 0px 0px 0px 20px;
     color: #f9f9f9;
     border: none;
-    line-height: 2em;
     font-size: 2em;
 }
 
@@ -132,8 +137,9 @@ first child of the left and right table columns */
 
 .footer
 {
-    color: #4e5766;
-    padding: 8px 0px 0px 0px;
+    color: #dde4ec;
+    background-color: #465c71;
+    padding: 0px;
     margin: 0px auto;
     text-align: center;
     line-height: normal;
@@ -190,6 +196,43 @@ div.menu ul li a:active
     text-decoration: none;
 }
 
+/* Mobile Menu */
+
+div.mobileMenu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.mobileMenu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    position:relative;
+    z-index:15;
+}
+
+div.mobileMenu ul li a, div.mobileMenu ul li a:visited
+{
+    background-color: #465c71;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.mobileMenu ul li a:hover
+{
+    text-decoration:underline;
+}
+
+div.mobileMenu ul li a:active
+{
+
+}
 /* FORM ELEMENTS   
 ----------------------------------------------------------*/
 
@@ -198,6 +241,7 @@ fieldset
     margin: 1em 0px;
     padding: 1em;
     border: 1px solid #ccc;
+    display: inline-block;
 }
 
 fieldset p 
@@ -249,8 +293,7 @@ div.accountInfo
 
 .title
 {
-    display: block;
-    float: left;
+    
     text-align: left;
     width: auto;
 }
@@ -258,10 +301,12 @@ div.accountInfo
 .loginDisplay
 {
     font-size: 1.1em;
-    display: block;
+    
     text-align: right;
     padding: 10px;
     color: White;
+    white-space: nowrap;
+    background: #4b6c9e;
 }
 
 .loginDisplay a:link

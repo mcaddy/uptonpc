@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Routing;
+using System.Web.Configuration;
 
 namespace UptonParishCouncil.Site
 {
@@ -14,6 +15,18 @@ namespace UptonParishCouncil.Site
         void Application_Start(object sender, EventArgs e)
         {
             RegisterRoutes(RouteTable.Routes);
+
+            // Enable the mobile detection provider.
+            HttpCapabilitiesBase.BrowserCapabilitiesProvider =
+                new FiftyOne.Foundation.Mobile.Detection.MobileCapabilitiesProvider();
+        }
+
+        protected void Application_AcquireRequestState(object sender, EventArgs e)
+        {
+            // Check if a redirection is needed.
+            //FiftyOne.Foundation.Mobile.Redirection.RedirectModule redirectModule = new FiftyOne.Foundation.Mobile.Redirection.RedirectModule();
+
+            //redirectModule.OnPostAcquireRequestState(sender, e);
         }
 
         public static void RegisterRoutes(RouteCollection routes)
@@ -23,9 +36,10 @@ namespace UptonParishCouncil.Site
             routes.MapPageRoute("SingleStory",
                 "News/{categoryName}/{NoticeId}/{Title}",
                 "~/News/single.aspx");
-            routes.MapPageRoute("AllStories",
+            routes.MapPageRoute("News",
                 "News/{categoryName}",
                 "~/News/Default.aspx");
+            routes.MapHttpHandlerRoute("NewsRss", "NewsRss/{categoryName}", new NewsRss());
             // Resource Routes
             routes.MapPageRoute("GetResource",
                 "Resource/{ResourceId}/{Title}",

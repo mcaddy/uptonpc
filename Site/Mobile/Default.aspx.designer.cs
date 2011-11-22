@@ -7,37 +7,46 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UptonParishCouncil.Site.Councillors {
+namespace UptonParishCouncil.Site.Mobile {
     
     
     public partial class Default {
         
         /// <summary>
-        /// councillorsLinksPanel control.
+        /// newsPreview control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel councillorsLinksPanel;
+        protected global::UptonParishCouncil.Site.News.Preview newsPreview;
         
         /// <summary>
-        /// ForReadingHyperLink control.
+        /// eventsPreview control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink ForReadingHyperLink;
+        protected global::UptonParishCouncil.Site.Events.EventsPreview eventsPreview;
         
         /// <summary>
-        /// titlePanel control.
+        /// minutesHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel titlePanel;
+        protected global::System.Web.UI.WebControls.HyperLink minutesHyperLink;
+        
+        /// <summary>
+        /// newsletterHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink newsletterHyperLink;
         
         /// <summary>
         /// profilesSqlDataSource control.

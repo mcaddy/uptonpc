@@ -47,6 +47,14 @@ namespace UptonParishCouncil.Site.News
             set { width = value; }
         }
 
+        private bool showBody;
+
+        public bool ShowBody
+        {
+            get { return showBody; }
+            set { showBody = value; }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!width.IsEmpty)
@@ -57,11 +65,16 @@ namespace UptonParishCouncil.Site.News
             switch (newsType)
             {
                 case Defines.NewsTypeEnum.General:
-                    hlRssLink.NavigateUrl = "/news/General_News.rss";
+                    hlRssLink.NavigateUrl = "/NewsRss/General";
+                    break;
+                case Defines.NewsTypeEnum.Police:
+                    hlRssLink.NavigateUrl = "/NewsRss/Police";
                     break;
                 default:
                     break;
             }
+
+            NewsRssPanel.Visible = !Utils.GetIsMobile();
 
             using (SqlConnection conUptonPC = DbHelper.OpenSqlConnection())
             {
@@ -89,7 +102,14 @@ namespace UptonParishCouncil.Site.News
 
         public string NewsUrl(object objNewsId)
         {
-            return string.Format("~/News/Default.aspx?NewsCategory={0}&id={1}#n{1}", (int)newsType, objNewsId);
+            if (Request.Browser.IsMobileDevice)
+            {
+                return string.Format("~/News/Single.aspx?id={0}", objNewsId);
+            }
+            else
+            {
+                return string.Format("~/News/Default.aspx?NewsCategory={0}&id={1}#n{1}", (int)newsType, objNewsId);
+            }
         }
     }
 }

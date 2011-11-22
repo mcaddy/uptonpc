@@ -79,7 +79,7 @@
                                 <td>
                                     <div>
                                         <b>Date:</b>
-                                        <asp:Label ID="TStampLabel" runat="server" Text='<%# Eval("TStamp", "{0:dd/MM/yyyy}") %>' />
+                                        <asp:Label ID="TStampLabel" runat="server" Text='<%# Eval("TStamp", "{0:yyyy-MM-dd}") %>' />
                                     </div>
                                 </td>
                             </tr>
@@ -118,8 +118,8 @@
                                 <td>
                                     <div>
                                         <b>Date:</b><br />
-                                        <ajaxToolkit:CalendarExtender runat="server" TargetControlID="tbTStamp" Format="dd/MM/yyyy" />
-                                        <asp:TextBox ID="tbTStamp" runat="server" Text='<%# Bind("TStamp", "{0:dd/MM/yyyy}") %>' />
+                                        <ajaxToolkit:CalendarExtender runat="server" TargetControlID="tbTStamp" Format="yyyy-MM-dd" />
+                                        <asp:TextBox ID="tbTStamp" runat="server" Text='<%# Bind("TStamp", "{0:yyyy-MM-dd}") %>' />
                                     </div>
                                 </td>
                             </tr>
@@ -160,8 +160,8 @@
                                     <div>
                                         Date:<br />
                                         <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="tbTStamp"
-                                            Format="dd/MM/yyyy" />
-                                        <asp:TextBox ID="tbTStamp" runat="server" Text='<%# Bind("TStamp", "{0:dd/MM/yyyy}") %>' />
+                                            Format="yyyy-MM-dd" />
+                                        <asp:TextBox ID="tbTStamp" runat="server" Text='<%# Bind("TStamp", "{0:yyyy-MM-dd}") %>' />
                                     </div>
                                 </td>
                             </tr>

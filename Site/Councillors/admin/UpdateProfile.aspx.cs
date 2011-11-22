@@ -25,9 +25,10 @@ namespace UptonParishCouncil.Site.Councillors.admin
             DataView dv = (DataView)profileSqlDataSource.Select(DataSourceSelectArguments.Empty);
             if (dv != null && dv.Table.Rows.Count > 0)
             {
-                FirstNameTextBox.Text = dv.Table.Rows[0]["FirstName"] as string;
-                SurnameTextBox.Text = dv.Table.Rows[0]["Surname"] as string;
-                EmailTextBox.Text = dv.Table.Rows[0]["ContactEmail"] as string;
+                FirstNameLabel.Text = dv.Table.Rows[0]["FirstName"] as string;
+                SurnameLabel.Text = dv.Table.Rows[0]["Surname"] as string;
+                EmailLabel.Text = dv.Table.Rows[0]["ContactEmail"] as string;
+
                 PhoneTextBox.Text = dv.Table.Rows[0]["ContactPhone"] as string;
                 BioTextBox.Text = dv.Table.Rows[0]["Bio"] as string;
                 ResponsibilitesTextBox.Text = dv.Table.Rows[0]["Responsibilites"] as string;

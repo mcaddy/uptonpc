@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="UptonParishCouncil.Site.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mobile.Master.cs" Inherits="UptonParishCouncil.Site.MobileMaster" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -6,6 +6,7 @@
     <title>Upton Parish Council</title>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width" />
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
@@ -22,7 +23,7 @@
 <body>
     <form runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"/>
-    <div class="page">
+    <div class="mobilePage">
         <div class="header">
             <div class="title">
                 <h1>
@@ -32,8 +33,10 @@
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
+                    
                         [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
                         ]
+                    
                     </AnonymousTemplate>
                     <LoggedInTemplate>
                         Welcome <span class="bold">
@@ -45,26 +48,22 @@
                     </LoggedInTemplate>
                 </asp:LoginView>
             </div>
-            <div class="clear hideSkiplink">
-                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="true" />
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" StaticDisplayLevels="2"
-                    DataSourceID="SiteMapDataSource1" EnableViewState="false" IncludeStyleBlock="false"
-                    Orientation="Horizontal" />
-            </div>
         </div>
+
         <div class="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         </div>
-        <div class="clear">
-        </div>
-        <div class="footer">
-        </div>
-        <div style="float: right;">
-            <asp:LinkButton ID="mobileVersionLinkButton" runat="server" 
-                onclick="mobileVersionLinkButton_Click">Mobile Version</asp:LinkButton>
-        </div>
     </div>
-
+    <div class="footer">
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+        <asp:Menu ID="NavigationMenu" runat="server" CssClass="mobileMenu" StaticDisplayLevels="1" MaximumDynamicDisplayLevels="0"
+            DataSourceID="SiteMapDataSource1" EnableViewState="false" IncludeStyleBlock="false"
+            Orientation="Horizontal" SkipLinkText="" />
+    </div>
+    <div style="float: right; display: inline">
+        <asp:LinkButton ID="DesktopVersionLinkButton" runat="server" Text="Desktop Version" 
+            onclick="DesktopVersionLinkButton_Click" />
+    </div>
     </form>
 </body>
 </html>

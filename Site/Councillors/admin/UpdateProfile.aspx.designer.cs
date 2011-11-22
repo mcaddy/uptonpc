@@ -22,31 +22,31 @@ namespace UptonParishCouncil.Site.Councillors.admin {
         protected global::System.Web.UI.WebControls.SqlDataSource profileSqlDataSource;
         
         /// <summary>
-        /// FirstNameTextBox control.
+        /// FirstNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FirstNameTextBox;
+        protected global::System.Web.UI.WebControls.Label FirstNameLabel;
         
         /// <summary>
-        /// SurnameTextBox control.
+        /// SurnameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SurnameTextBox;
+        protected global::System.Web.UI.WebControls.Label SurnameLabel;
         
         /// <summary>
-        /// EmailTextBox control.
+        /// EmailLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
+        protected global::System.Web.UI.WebControls.Label EmailLabel;
         
         /// <summary>
         /// PhoneTextBox control.

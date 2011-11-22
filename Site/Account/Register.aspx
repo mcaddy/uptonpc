@@ -24,10 +24,8 @@
     </span>
     <asp:ValidationSummary ID="RegisterUserValidationSummary" runat="server" CssClass="failureNotification"
         ValidationGroup="RegisterUserValidationGroup" ShowMessageBox="True" ShowSummary="False" />
-    <table width="100%" cellpadding="4" cellspacing="0">
-        <tr>
-            <td style="vertical-align: top;">
-                <fieldset class="register">
+
+         <fieldset class="register">
                     <legend>Account Information</legend>
                     <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email" Text="E-mail:" />
                     <asp:TextBox ID="Email" runat="server" CssClass="textEntry" />
@@ -54,8 +52,7 @@
                         ErrorMessage="The Password and Confirmation Password must match." ValidationGroup="RegisterUserValidationGroup"
                         Text="*" />
                 </fieldset>
-            </td>
-            <td style="vertical-align: top;">
+
                 <fieldset class="address">
                     <legend>Your Details</legend>
                     
@@ -67,7 +64,7 @@
                         Text="*" /><br />
                     
                     <asp:Label ID="SurnameLabel" runat="server" AssociatedControlID="Surname"
-                        Text="Surame:" />
+                        Text="Surname:" />
                     <asp:TextBox ID="Surname" runat="server" CssClass="textEntry" />
                     <asp:RequiredFieldValidator ID="SurnameRequiredFieldValidator" runat="server" ControlToValidate="Surname"
                         CssClass="failureNotification" ErrorMessage="Surname is required."
@@ -94,21 +91,14 @@
                         CssClass="failureNotification" ErrorMessage="PostCode is required." ToolTip="PostCode is required."
                         ValidationGroup="RegisterUserValidationGroup" Text="*" />
                 </fieldset>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <div class="note">
-                    Passwords are required to be a minimum of
-                    <%= Membership.MinRequiredPasswordLength %>
-                    characters in length.</div>
-                <div class="submitButton">
-                    <asp:Button ID="CreateUserButton" runat="server" Text="Finish" ValidationGroup="RegisterUserValidationGroup"
-                        OnClick="CreateUserButton_Click" /></div>
-            </td>
-        </tr>
-        <tr>
-        <td colspan="2">We only collect the minimum amount of data required to allow us to keep track of who is using our site, we will not pass it on to anyone or use it for any purposes other than to contact you regarding matters relating to Upton Parish Council.</td>
-        </tr>
-    </table>
+                <br />
+            <asp:Button ID="CreateUserButton" runat="server" Text="Register" ValidationGroup="RegisterUserValidationGroup"
+                OnClick="CreateUserButton_Click" />
+
+        <p class="note">
+            Passwords are required to be a minimum of
+            <%= Membership.MinRequiredPasswordLength %>
+            characters in length.</p>
+
+        <p>We only collect the minimum amount of data required to allow us to keep track of who is using our site, we will not pass it on to anyone or use it for any purposes other than to contact you regarding matters relating to Upton Parish Council.</p>
 </asp:Content>

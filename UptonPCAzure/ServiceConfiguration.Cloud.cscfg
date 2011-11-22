@@ -4,6 +4,9 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=fiftyonedegrees;AccountKey=tjGRSTiSDSWJYcPItVxY6q+c1Q6C0zem6FNOxTxUs5WuLM8BXAmSWs8Mu3IeS3LL61weQ55hLCdO/zEKwclyrw==" />
     </ConfigurationSettings>
+    <Certificates>
+    </Certificates>
   </Role>
 </ServiceConfiguration>

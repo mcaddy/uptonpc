@@ -206,7 +206,7 @@ namespace UptonParishCouncil.Site.Events.Admin
                         SqlDataReader SurveyReader = SurveyCommand.ExecuteReader();
                         if (SurveyReader.Read())
                         {
-                            DateTextBox.Text = SurveyReader.GetDateTime(SurveyReader.GetOrdinal("Date")).ToString("dd/MM/yyyy");
+                            DateTextBox.Text = SurveyReader.GetDateTime(SurveyReader.GetOrdinal("Date")).ToString("yyyy-MM-dd");
                             TitleTextBox.Text = SurveyReader.GetString(SurveyReader.GetOrdinal("Title"));
                             
                             int ColumnOrdinal = SurveyReader.GetOrdinal("Description");
@@ -272,12 +272,12 @@ namespace UptonParishCouncil.Site.Events.Admin
                         SqlDataReader SurveyReader = SurveyCommand.ExecuteReader();
                         if (SurveyReader.Read())
                         {
-                            StartDateTextBox.Text = SurveyReader.GetDateTime(SurveyReader.GetOrdinal("StartDate")).ToString("dd/MM/yyyy");
+                            StartDateTextBox.Text = SurveyReader.GetDateTime(SurveyReader.GetOrdinal("StartDate")).ToString("yyyy-MM-dd");
 
                             int ColumnOrdinal = SurveyReader.GetOrdinal("EndDate");
                             if (!SurveyReader.IsDBNull(ColumnOrdinal))
                             {
-                                EndDateTextBox.Text = SurveyReader.GetDateTime(ColumnOrdinal).ToString("dd/MM/yyyy");
+                                EndDateTextBox.Text = SurveyReader.GetDateTime(ColumnOrdinal).ToString("yyyy-MM-dd");
                             }
                             
                             FrequencyDayDropDownList.ClearSelection();
