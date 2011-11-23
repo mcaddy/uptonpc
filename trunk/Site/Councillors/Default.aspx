@@ -20,7 +20,7 @@
     <ItemTemplate>
 
 <span style="float:right;">
-    <asp:Image ID="profileImage" runat="server" ImageUrl='<%# Eval("ResourceId","~/Resources/GetBlob.ashx?id={0}") %>' />
+    <asp:Image ID="profileImage" runat="server" Visible='<%# GetDbSafeInt(Eval("ResourceId")) > 0%>' ImageUrl='<%# Eval("ResourceId","~/Resources/GetBlob.ashx?id={0}") %>' />
     </span>
 
     <span style="font-size:larger; font-weight:bolder;"><%# Eval("FirstName") %> <%# Eval("Surname") %></span><br />

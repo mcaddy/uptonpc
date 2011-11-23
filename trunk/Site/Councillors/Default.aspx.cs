@@ -14,6 +14,15 @@ namespace UptonParishCouncil.Site.Councillors
             MasterPageFile = Utils.GetMasterPage();
         }
 
+        public int GetDbSafeInt(object dbInt)
+        {
+            if (dbInt is Int32)
+            {
+                return (int)dbInt;
+            }
+            return 0;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             councillorsLinksPanel.Visible = User.IsInRole("IsCouncillor");
