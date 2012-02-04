@@ -285,6 +285,13 @@ div.accountInfo
 /* MISC  
 ----------------------------------------------------------*/
 
+.verticalText {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-writing-mode: tb-rl;
+        -ms-filter: flipv fliph;
+}
+
 .clear
 {
     clear: both;

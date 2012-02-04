@@ -13,6 +13,33 @@ namespace UptonParishCouncil.Site.Councillors.admin {
     public partial class UpdateProfile {
         
         /// <summary>
+        /// councillorsSqlDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource councillorsSqlDataSource;
+        
+        /// <summary>
+        /// SelectCouncillorPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel SelectCouncillorPanel;
+        
+        /// <summary>
+        /// councillorDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList councillorDropDownList;
+        
+        /// <summary>
         /// profileSqlDataSource control.
         /// </summary>
         /// <remarks>

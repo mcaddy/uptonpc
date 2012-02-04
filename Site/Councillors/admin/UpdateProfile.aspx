@@ -2,6 +2,20 @@
 <asp:Content ID="headContent" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="mainContent" ContentPlaceHolderID="MainContent" runat="server">
+<!-- User Picker -->
+    <asp:SqlDataSource ID="councillorsSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:UptonPC %>"
+            ProviderName="<%$ ConnectionStrings:UptonPC.ProviderName %>"
+                SelectCommand="UptonPC_GetCouncillorProfiles" 
+    SelectCommandType="StoredProcedure" ></asp:SqlDataSource>
+    <asp:Panel ID="SelectCouncillorPanel" runat="server" >
+        Select Councillor: <asp:DropDownList ID="councillorDropDownList" runat="server" 
+            DataSourceID="councillorsSqlDataSource" DataTextField="DisplayName" 
+            DataValueField="UserId" AutoPostBack="true" 
+            onselectedindexchanged="councillorDropDownList_SelectedIndexChanged">
+        </asp:DropDownList>
+        <hr />
+    </asp:Panel>
+    <!-- Main Update Form -->
     <asp:SqlDataSource ID="profileSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:UptonPC %>"
             ProviderName="<%$ ConnectionStrings:UptonPC.ProviderName %>" 
     SelectCommand="UptonPC_GetCouncillorProfile" 

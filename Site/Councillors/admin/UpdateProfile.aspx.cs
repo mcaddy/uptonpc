@@ -16,8 +16,12 @@ namespace UptonParishCouncil.Site.Councillors.admin
         {
             if (!IsPostBack)
             {
-                LoadData();
+                SetCurrentCouncillor();
+
+                LoadData();   
             }
+
+            SelectCouncillorPanel.Visible = User.IsInRole("userAdmin");
         }
 
         private void LoadData()
@@ -52,21 +56,21 @@ namespace UptonParishCouncil.Site.Councillors.admin
 
             SetProfilePhoto();
 
-            Response.Redirect(string.Format("~/Councillors/Default.aspx?UserId={0}", Membership.GetUser(User.Identity.Name).ProviderUserKey));
+            Response.Redirect(string.Format("~/Councillors/Default.aspx?UserId={0}", GetEditUser()));
         }
 
         private void SetProfilePhoto()
         {
             if (photoFileUpload.HasFile)
             {
-                MembershipUser CurrentUser = Membership.GetUser(User.Identity.Name);
+                Guid currentUser = GetEditUser();
 
                 if (ImageUtils.FileIsImage(photoFileUpload.PostedFile.ContentType))
                 {
-                    byte[] photoBytes = ImageUtils.imageToByteArray(ImageUtils.ResizeJpeg(ImageUtils.byteArrayToImage(photoFileUpload.FileBytes), 160, 160));
+                    byte[] photoBytes = ImageUtils.imageToByteArray(ImageUtils.ResizeJpeg(ImageUtils.byteArrayToImage(photoFileUpload.FileBytes), 160, 260));
 
                     // Add the Resource
-                    int ResourceId = ResourceUtilities.AddResource(CurrentUser.ProviderUserKey.ToString(), 3, photoBytes, photoFileUpload.FileName);
+                    int ResourceId = ResourceUtilities.AddResource(currentUser.ToString(), 3, photoBytes, photoFileUpload.FileName);
 
                     // Store the ID of the new Resource
                     using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["UptonPC"].ConnectionString))
@@ -79,7 +83,7 @@ namespace UptonParishCouncil.Site.Councillors.admin
                             command.Parameters.Add("@UserId", SqlDbType.UniqueIdentifier);
                             command.Parameters.Add("@ResourceId", SqlDbType.Int);
 
-                            command.Parameters["@UserId"].Value = CurrentUser.ProviderUserKey;
+                            command.Parameters["@UserId"].Value = currentUser;
                             command.Parameters["@ResourceId"].Value = ResourceId;
 
                             command.ExecuteNonQuery();
@@ -93,8 +97,38 @@ namespace UptonParishCouncil.Site.Councillors.admin
 
         protected void profileSqlDataSource_SetUser(object sender, SqlDataSourceCommandEventArgs e)
         {
-            MembershipUser CurrentUser = Membership.GetUser(User.Identity.Name); 
-            e.Command.Parameters["@UserId"].Value = CurrentUser.ProviderUserKey;
+            e.Command.Parameters["@UserId"].Value = GetEditUser();
+        }
+
+        private Guid GetEditUser()
+        {
+            if (User.IsInRole("userAdmin"))
+            {
+                return Guid.Parse(councillorDropDownList.SelectedValue);
+            }
+            else
+            {
+                MembershipUser CurrentUser = Membership.GetUser(User.Identity.Name);
+                return (Guid)CurrentUser.ProviderUserKey;
+            }
+        }
+
+        private void SetCurrentCouncillor()
+        {
+            councillorDropDownList.DataBind();
+
+            MembershipUser CurrentUser = Membership.GetUser(User.Identity.Name);
+            ListItem currentUser = councillorDropDownList.Items.FindByValue(CurrentUser.ProviderUserKey.ToString());
+            councillorDropDownList.ClearSelection();
+            if (currentUser != null)
+            {
+                currentUser.Selected = true;
+            }
+        }
+
+        protected void councillorDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

@@ -25,7 +25,7 @@
 
     <span style="font-size:larger; font-weight:bolder;"><%# Eval("FirstName") %> <%# Eval("Surname") %></span><br />
     
-    <p><%# Eval("Bio").ToString().Replace("\r", "</p><p>")%></p>
+    <div style="min-height:60px"><div style="padding-bottom:12px;"><%# Eval("Bio").ToString().Replace("\r", "</div><div style=\"padding-bottom:12px;\">")%></div></div>
     
     <asp:Panel ID="ResponsibilitesPanel" runat="server" Visible='<%# !string.IsNullOrEmpty(Eval("Responsibilites").ToString()) %>'>
         <span style="font-style:italic; font-weight:bold;">Responsibilites:</span><br />
