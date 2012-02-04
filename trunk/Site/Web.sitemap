@@ -14,12 +14,13 @@
       <siteMapNode url="Councillors/admin/UpdateProfile.aspx" title="Update Profile"  description=""/>
       <siteMapNode url="Councillors/admin/ForReading.aspx" title="For Reading"  description=""/>
     </siteMapNode>
-    <siteMapNode url="Admin.aspx" title="Admin"  description="">
-      <siteMapNode url="News/admin/Default.aspx" title="News"  description="" >
-        <siteMapNode url="News/admin/Default.aspx?AddNew=true" title="Add"  description="" />
+    <siteMapNode url="Admin.aspx" title="Admin" description="">
+      <siteMapNode url="News/admin/Default.aspx" title="News" description="" >
+        <siteMapNode url="News/admin/Default.aspx?AddNew=true" title="Add" description="" />
       </siteMapNode>
-      <siteMapNode url="Events/admin/Default.aspx" title="Events"  description="" />
-      <siteMapNode url="Resources/admin/Default.aspx" title="Resources"  description="" />
+      <siteMapNode url="Events/admin/Default.aspx" title="Events" description="" />
+      <siteMapNode url="Resources/admin/Default.aspx" title="Resources" description="" />
+      <siteMapNode url="Account/admin/Default.aspx" title="Users" description="" />
     </siteMapNode>
     <siteMapNode url="ContactUs.aspx" title="Contact Us"  description="Key Contact Details" />
   </siteMapNode>

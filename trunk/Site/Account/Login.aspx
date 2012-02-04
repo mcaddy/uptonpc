@@ -46,4 +46,5 @@
             </div>
         </LayoutTemplate>
     </asp:Login>
+    Click&nbsp;<asp:HyperLink ID="forgotHyperLink" runat="server" NavigateUrl="~/Account/ForgotPassword.aspx" Text="here" />&nbsp;if you have forgotten your password.
 </asp:Content>

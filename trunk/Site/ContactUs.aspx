@@ -12,7 +12,7 @@
     </p>
     <h3>Parish Clerk:</h3>
     <p>
-        Mr A Oakley - <a href="mailto:aoakley@btconnect.com">aoakley@btconnect.com</a>
+        Mr A Oakley - <a href="mailto:parishClerk@UptonPC.org">parishClerk@UptonPC.org</a>
     </p>
     <p>
         79 Harlestone Road,
@@ -22,11 +22,11 @@
         NN5 7AB</p>
  
 <h3>Chairman:</h3>
-<p>Mr Shaun Pape - <a href="mailto:shaun.pape@lineone.net">shaun.pape@lineone.net</a></p>
+<p>Mr Shaun Pape - <a href="mailto:Cllr.SPape@UptonPC.org">Cllr.SPape@UptonPC.org</a></p>
 <p>01604 831895</p>
  
 <h3>Vice-Chairman:</h3>
-<p>Mr Alan Bottwood - <a href="mailto:cllr.bottwood@btinternet.com">cllr.bottwood@btinternet.com</a></p>
+<p>Mr Alan Bottwood - <a href="mailto:Cllr.ABottwood@UptonPC.org">Cllr.ABottwood@UptonPC.org</a></p>
 <p>01604 758707</p>
  
 
