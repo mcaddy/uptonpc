@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("UptonParishCouncil.DAL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("TOSHIBA")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UptonParishCounci.lDAL")]
 [assembly: AssemblyCopyright("Copyright © Mike Caddy 2011")]
 [assembly: AssemblyTrademark("")]
